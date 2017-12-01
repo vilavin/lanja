@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="username" placeholder="随便输入">
+<button onclick="clickMe()"> 点我获取内容</button>
+
+<script type="text/javascript">
+    function clickMe() {
+        //1.先找到input元素
+        //通过id的方式获取元素,返回的是单个对象
+        var input=document.getElementById("username");
+        //2.获取input元素的值
+        var value=input.value;
+        //3.以弹出框的方式显示输入值
+        alert("输入框的值:"+value);
+        //改变元素样式
+        input.style.color="#f88";
+        input.style.borderColor="yellow";
+
+    }
+
+
+
+</script>
+</body>
+</html>

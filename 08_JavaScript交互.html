@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS交互</title>
+</head>
+<body>
+<p>通过html标签的onclick事件调用JavaScript中自定义的方法clickMe</p>
+<button id="clickme" onclick="clickMe()">
+点我
+
+</button>
+<button onclick="showAlert()">点我alert</button>
+<button onclick="showConfirm()">点我confirm</button>
+<button onclick="showPrompt()">点我prompt</button>
+
+<script type="text/javascript">
+    //定义一个方法
+    function clickMe() {
+        console.log("你点击了button按钮");
+
+    }
+    function showAlert() {
+        /*
+        * 系统提示框  共3种
+        * alert,confirm,prompt
+        *
+        * */
+        alert("我是一个带确定按钮的系统警示框");
+
+    }
+    function showConfirm() {
+        var result=confirm("我是一个带确定和取消按钮的系统确定框");
+        console.log("用户选择的结果"+result);
+
+
+    }
+    function showPrompt() {
+        var result=prompt("我是一个带输入框的提示框","输入框的默认值");
+
+        //确定按钮:返回用户在输入框中输入的值
+        //取消按钮:返回null
+        console.log("用户选择的结果"+result);
+
+    }
+</script>
+</body>
+</html>
